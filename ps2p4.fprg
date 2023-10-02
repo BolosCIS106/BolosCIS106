@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="chabo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-01 06:43:53 PM"/>
+        <attribute name="created" value="Y2hhYm87REVTS1RPUC01SjRLQ01POzIwMjMtMTAtMDE7MDY6MzQ6NDggUE07Mjg0Nw=="/>
+        <attribute name="edited" value="Y2hhYm87REVTS1RPUC01SjRLQ01POzIwMjMtMTAtMDE7MDY6NDM6NTMgUE07MTsyOTUx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastname" type="String" array="False" size=""/>
+            <declare name="credithours" type="Real" array="False" size=""/>
+            <declare name="tuition" type="Real" array="False" size=""/>
+            <input variable="credithours"/>
+            <input variable="lastname"/>
+            <assign variable="lastname" expression="lastname"/>
+            <assign variable="tuition" expression="credithours * 250 + 100"/>
+            <output expression="&quot;Total Tuition = $&quot;&amp;tuition" newline="True"/>
+            <output expression="&quot;Last Name = &quot; &amp;lastname" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
