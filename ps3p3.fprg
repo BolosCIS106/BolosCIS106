@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="chabo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-08 02:47:13 PM"/>
+        <attribute name="created" value="Y2hhYm87REVTS1RPUC01SjRLQ01POzIwMjMtMTAtMDg7MDI6Mzk6MTYgUE07Mjg1MA=="/>
+        <attribute name="edited" value="Y2hhYm87REVTS1RPUC01SjRLQ01POzIwMjMtMTAtMDg7MDI6NDc6MTMgUE07MTsyOTU0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="receivedamnt" type="Real" array="False" size=""/>
+            <input variable="receivedamnt"/>
+            <assign variable="receivedamnt" expression="receivedamnt / 3"/>
+            <output expression="&quot;Each Received Amount:  $&quot; &amp; receivedamnt" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

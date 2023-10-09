@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="chabo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-08 02:37:31 PM"/>
+        <attribute name="created" value="Y2hhYm87REVTS1RPUC01SjRLQ01POzIwMjMtMTAtMDg7MDI6MTk6MzAgUE07Mjg0NA=="/>
+        <attribute name="edited" value="Y2hhYm87REVTS1RPUC01SjRLQ01POzIwMjMtMTAtMDg7MDI6Mzc6MzEgUE07MTsyOTUz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ticker" type="String" array="False" size=""/>
+            <declare name="amnt" type="Real" array="False" size=""/>
+            <declare name="cost" type="Real" array="False" size=""/>
+            <input variable="ticker"/>
+            <input variable="amnt"/>
+            <input variable="cost"/>
+            <assign variable="ticker" expression="ticker"/>
+            <assign variable="amnt" expression="amnt * cost"/>
+            <output expression="&quot;Stock: &quot; &amp; ticker" newline="True"/>
+            <output expression="&quot;Amount Invested: &quot; &amp; amnt" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
