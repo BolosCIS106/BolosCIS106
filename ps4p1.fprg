@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="chabo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-15 02:08:09 PM"/>
+        <attribute name="created" value="Y2hhYm87REVTS1RPUC01SjRLQ01POzIwMjMtMTAtMTU7MDE6NDU6MDIgUE07MjgzOQ=="/>
+        <attribute name="edited" value="Y2hhYm87REVTS1RPUC01SjRLQ01POzIwMjMtMTAtMTU7MDI6MDg6MDkgUE07MTsyOTU0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="firstexam" type="Real" array="False" size=""/>
+            <declare name="secondexam" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <declare name="pointexamone" type="Real" array="False" size=""/>
+            <declare name="pointexamtwo" type="Real" array="False" size=""/>
+            <input variable="firstexam"/>
+            <input variable="secondexam"/>
+            <assign variable="pointexamone" expression="firstexam * 100"/>
+            <assign variable="pointexamtwo" expression="secondexam * 100"/>
+            <assign variable="total" expression="pointexamone + pointexamtwo"/>
+            <output expression="&quot;Total out of 200 points = &quot; &amp;total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

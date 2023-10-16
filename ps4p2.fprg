@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="chabo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-15 03:00:21 PM"/>
+        <attribute name="created" value="Y2hhYm87REVTS1RPUC01SjRLQ01POzIwMjMtMTAtMTU7MDI6MzE6NDQgUE07Mjg0MQ=="/>
+        <attribute name="edited" value="Y2hhYm87REVTS1RPUC01SjRLQ01POzIwMjMtMTAtMTU7MDM6MDA6MjEgUE07MTsyOTQx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="prchprice" type="Real" array="False" size=""/>
+            <declare name="crrntprice" type="Real" array="False" size=""/>
+            <declare name="qnty" type="Real" array="False" size=""/>
+            <declare name="Amount" type="Real" array="False" size=""/>
+            <declare name="initialamt" type="Real" array="False" size=""/>
+            <declare name="nowamt" type="Real" array="False" size=""/>
+            <input variable="prchprice"/>
+            <input variable="crrntprice"/>
+            <input variable="qnty"/>
+            <assign variable="initialamt" expression="prchprice * qnty"/>
+            <assign variable="nowamt" expression="crrntprice * qnty"/>
+            <assign variable="Amount" expression="nowamt - initialamt"/>
+            <output expression="&quot;Total Amount: $ &quot;&amp;Amount" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
