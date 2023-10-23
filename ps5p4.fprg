@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="chabo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-22 10:50:40 PM"/>
+        <attribute name="created" value="Y2hhYm87REVTS1RPUC01SjRLQ01POzIwMjMtMTAtMjI7MTA6MzU6MDUgUE07MjgzOQ=="/>
+        <attribute name="edited" value="Y2hhYm87REVTS1RPUC01SjRLQ01POzIwMjMtMTAtMjI7MTA6NTA6NDAgUE07MTsyOTQz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="warrantee" type="Real" array="False" size=""/>
+            <declare name="appliance" type="Real" array="False" size=""/>
+            <declare name="price" type="Real" array="False" size=""/>
+            <declare name="name" type="String" array="False" size=""/>
+            <declare name="cost" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <input variable="name"/>
+            <input variable="cost"/>
+            <if expression="cost &gt; 1000.00">
+                <then>
+                    <assign variable="warrantee" expression=".10 * cost"/>
+                </then>
+                <else>
+                    <assign variable="warrantee" expression=".05 * cost"/>
+                </else>
+            </if>
+            <assign variable="appliance" expression="cost"/>
+            <assign variable="total" expression="appliance + warrantee"/>
+            <output expression="&quot;Name: &quot; &amp;name" newline="True"/>
+            <output expression="&quot;Warrantee Cost: $&quot; &amp;warrantee" newline="True"/>
+            <output expression="&quot;Total Cost: $:&quot; &amp;total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

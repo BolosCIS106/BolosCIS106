@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="chabo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-22 09:30:01 PM"/>
+        <attribute name="created" value="Y2hhYm87REVTS1RPUC01SjRLQ01POzIwMjMtMTAtMjI7MDg6NTU6NTIgUE07Mjg1MA=="/>
+        <attribute name="edited" value="Y2hhYm87REVTS1RPUC01SjRLQ01POzIwMjMtMTAtMjI7MDk6MzA6MDEgUE07MTsyOTQ2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="books" type="Real" array="False" size=""/>
+            <declare name="price" type="Real" array="False" size=""/>
+            <declare name="shipping" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <declare name="totalb" type="Real" array="False" size=""/>
+            <input variable="books"/>
+            <input variable="price"/>
+            <assign variable="totalb" expression="books * price"/>
+            <if expression="totalb &lt;= 50.00">
+                <then>
+                    <assign variable="shipping" expression="25.00"/>
+                </then>
+                <else>
+                    <assign variable="shipping" expression="0.00"/>
+                </else>
+            </if>
+            <assign variable="total" expression="totalb + shipping"/>
+            <output expression="&quot;Books Price: $&quot; &amp;totalb" newline="True"/>
+            <output expression="&quot;Shipping Charge: $&quot; &amp;shipping" newline="True"/>
+            <output expression="&quot;Total: $&quot; &amp;total" newline="True"/>
+            <output expression="&quot;Thanks For Your Purchase Have a Good Day!&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
