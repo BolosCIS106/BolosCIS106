@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="chabo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-31 08:07:28 PM"/>
+        <attribute name="created" value="Y2hhYm87REVTS1RPUC01SjRLQ01POzIwMjMtMTAtMzE7MDY6NDU6NTkgUE07Mjg1NA=="/>
+        <attribute name="edited" value="Y2hhYm87REVTS1RPUC01SjRLQ01POzIwMjMtMTAtMzE7MDg6MDc6MjggUE07MTsyOTU4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="pnumber" type="Integer" array="False" size=""/>
+            <declare name="cost" type="Real" array="False" size=""/>
+            <declare name="unitcost" type="Real" array="False" size=""/>
+            <declare name="qnty" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <input variable="pnumber"/>
+            <input variable="qnty"/>
+            <if expression="pnumber == 55">
+                <then>
+                    <assign variable="unitcost" expression="1.00"/>
+                </then>
+                <else>
+                    <if expression="pnumber == 10">
+                        <then>
+                            <assign variable="unitcost" expression="1.00"/>
+                        </then>
+                        <else>
+                            <if expression="pnumber == 99">
+                                <then>
+                                    <assign variable="unitcost" expression="2.00"/>
+                                </then>
+                                <else>
+                                    <if expression="pnumber == 80">
+                                        <then>
+                                            <assign variable="unitcost" expression="3.00"/>
+                                        </then>
+                                        <else>
+                                            <if expression="pnumber = 70">
+                                                <then>
+                                                    <assign variable="unitcost" expression="3.00"/>
+                                                </then>
+                                                <else>
+                                                    <assign variable="unitcost" expression="5.00"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="total" expression="qnty * unitcost"/>
+            <output expression="&quot;Part Number: &quot; &amp;pnumber" newline="True"/>
+            <output expression="&quot;Cost Per Unit: $&quot; &amp;unitcost" newline="True"/>
+            <output expression="&quot;Total Cost: $&quot; &amp;total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
