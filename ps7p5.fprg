@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="chabo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-07 09:45:01 PM"/>
+        <attribute name="created" value="Y2hhYm87REVTS1RPUC01SjRLQ01POzIwMjMtMTEtMDc7MDk6MTU6MzggUE07Mjg1NQ=="/>
+        <attribute name="edited" value="Y2hhYm87REVTS1RPUC01SjRLQ01POzIwMjMtMTEtMDc7MDk6NDU6MDEgUE07MTsyOTU2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="response" type="String" array="False" size=""/>
+            <declare name="qty" type="Integer" array="False" size=""/>
+            <declare name="price" type="Real" array="False" size=""/>
+            <declare name="extprice" type="Integer" array="False" size=""/>
+            <declare name="discountamt" type="Real" array="False" size=""/>
+            <declare name="disctotal" type="Real" array="False" size=""/>
+            <declare name="sumofdiscamt" type="Real" array="False" size=""/>
+            <declare name="nooforders" type="Integer" array="False" size=""/>
+            <assign variable="sumofdiscamt" expression="0"/>
+            <assign variable="nooforders" expression="0"/>
+            <declare name="totalorder" type="Real" array="False" size=""/>
+            <declare name="avgdiscamt" type="Real" array="False" size=""/>
+            <output expression="&quot;Do you want to calculate total order with discount? (Yes or No)&quot;" newline="True"/>
+            <input variable="response"/>
+            <while expression="response == &quot;Yes&quot;">
+                <input variable="qty"/>
+                <input variable="price"/>
+                <assign variable="extprice" expression="qty * price"/>
+                <if expression="extprice &gt; 10000.00">
+                    <then>
+                        <assign variable="discountamt" expression="extprice * 0.25"/>
+                    </then>
+                    <else>
+                        <assign variable="discountamt" expression="extprice * 0.10"/>
+                    </else>
+                </if>
+                <assign variable="totalorder" expression="extprice - discountamt"/>
+                <assign variable="sumofdiscamt" expression="sumofdiscamt + discountamt"/>
+                <assign variable="nooforders" expression="nooforders + 1"/>
+                <output expression="&quot;Extended Price: $&quot; &amp;extprice" newline="True"/>
+                <output expression="&quot;Discount Amount: $&quot; &amp;discountamt" newline="True"/>
+                <output expression="&quot;Total Order Amount: $&quot; &amp;totalorder" newline="True"/>
+                <output expression="&quot;Do you want to enter another order (Yes or No)&quot;" newline="True"/>
+                <input variable="response"/>
+            </while>
+            <output expression="&quot;Total DIscounts Given: $&quot; &amp;sumofdiscamt" newline="True"/>
+            <output expression="&quot;Number of orders entered &quot; &amp;nooforders" newline="True"/>
+            <assign variable="avgdiscamt" expression="sumofdiscamt / nooforders"/>
+            <output expression="&quot;Average Discount: $&quot; &amp;avgdiscamt" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
